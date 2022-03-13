@@ -27,7 +27,9 @@ class TableViewController: UITableViewController {
             }
         }
         
-        alertController.addTextField { _ in }
+        alertController.addTextField { (textField) in
+            textField.autocapitalizationType = UITextAutocapitalizationType.sentences
+        }
         let cancelAction = UIAlertAction(title: "Cancel", style: .default) { _ in }
         
         alertController.addAction(saveAction)
